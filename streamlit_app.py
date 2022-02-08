@@ -14,12 +14,12 @@ col1, col2, col3 = st.columns([1,1,1])
 col2.image(me_img)
 
 # Socials
-import cv2
-linkedin_img = cv2.cvtColor(cv2.resize(cv2.imread('icons/linkedin.png'), (50, 50), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
-github_img = cv2.cvtColor(cv2.resize(cv2.imread('icons/github.png'), (50, 50), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
-col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
-col3.image(linkedin_img)
-col4.image(github_img)
+#import cv2
+#linkedin_img = cv2.cvtColor(cv2.resize(cv2.imread('icons/linkedin.png'), (50, 50), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
+#github_img = cv2.cvtColor(cv2.resize(cv2.imread('icons/github.png'), (50, 50), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
+#col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
+#col3.image(linkedin_img)
+#col4.image(github_img)
 
 st.markdown("""
   <style>
