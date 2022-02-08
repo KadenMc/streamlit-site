@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
 
+st.set_page_config(page_title="Kaden McKeen")#, layout="wide")
+
 # Get style
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
@@ -10,42 +12,35 @@ st.write('''# Kaden McKeen''')
 
 # Centered headshot image
 me_img = Image.open('me.png')
-col1, col2, col3 = st.columns([1,1,1])
+col1, col2, col3 = st.columns([1, 1, 1])
 col2.image(me_img)
 
 # Socials
-#import cv2
-#linkedin_img = cv2.cvtColor(cv2.resize(cv2.imread('icons/linkedin.png'), (50, 50), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
-#github_img = cv2.cvtColor(cv2.resize(cv2.imread('icons/github.png'), (50, 50), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2RGB)
-#col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
-#col3.image(linkedin_img)
-#col4.image(github_img)
-
-st.markdown("""
+github = "PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iNTEyLjAwMDAwMHB0IiBoZWlnaHQ9IjUxMi4wMDAwMDBwdCIgdmlld0JveD0iMCAwIDUxMi4wMDAwMDAgNTEyLjAwMDAwMCIKIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgoKPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNTEyLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSIKZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSJub25lIj4KPHBhdGggZD0iTTIzNjAgNTA0OSBjLTE1NCAtMTEgLTM1NyAtNDcgLTUxNiAtOTMgLTkwMiAtMjU5IC0xNjAzIC0xMDE3IC0xNzkwCi0xOTM0IC0xMzYgLTY2OSAtOCAtMTM1NSAzNTQgLTE5MDggMjU1IC0zOTAgNTgwIC02ODYgOTY4IC04ODYgMTQxIC03MyAzNDEKLTE1NCA0MDMgLTE2NCA1OCAtOSAxMDkgMTkgMTMzIDczIDE4IDQwIDE4IDYwIDEyIDI4NiBsLTcgMjQzIC04NiAtMTQgYy05NwotMTUgLTI1NiAtOSAtMzg2IDEzIC0xMDUgMTkgLTIxMSA3MSAtMjc4IDEzOSAtNTMgNTMgLTY3IDc2IC0xMzYgMjI5IC02MyAxMzkKLTEzNSAyMzEgLTIzMiAyOTcgLTY2IDQ2IC0xMjEgMTA2IC0xMTcgMTI4IDYgMzAgNDggNDMgMTIxIDM4IDE0MSAtMTAgMjg4Ci0xMTMgMzkzIC0yNzQgNzIgLTExMCAxNDMgLTE3OSAyMzAgLTIyMiA2MiAtMzEgNzkgLTM1IDE2OSAtMzggMTAzIC00IDIwNyAxMgoyOTEgNDQgNDEgMTYgNDMgMTggNTggODUgMTkgODYgNTYgMTY0IDEwNiAyMjggbDM5IDQ5IC04MiAxMSBjLTI2NCAzOCAtNDUyCjEwMiAtNjI3IDIxNSAtMjI5IDE0OCAtMzY1IDM3OSAtNDMxIDczMSAtMjAgMTA5IC0yMyAzODkgLTUgNDkyIDI5IDE2NyA5OAozMTkgMjAwIDQ0NSBsNDUgNTUgLTIwIDYyIGMtNTIgMTY4IC00MiAzNzIgMjggNTc0IDE4IDUwIDIyIDUyIDEwMyA0OCAxMTggLTYKMzcxIC0xMDggNTQzIC0yMTggbDcxIC00NiA1NiAxMSBjMzAgNiA4NyAxOCAxMjcgMjcgMjcxIDU4IDY1NSA1OCA5MjYgMCA0MAotOSA5NyAtMjEgMTI3IC0yNyBsNTUgLTEwIDk1IDU4IGMyMjYgMTM3IDQ4NCAyMzAgNTc1IDIwNiAyNiAtNyAzMyAtMTcgNTMKLTc1IDQzIC0xMjUgNTUgLTIxMCA1MCAtMzUxIC00IC05NSAtMTEgLTE0OCAtMjYgLTE5NSBsLTIxIC02NCA0NCAtNTQgYzg5Ci0xMDkgMTU1IC0yNDQgMTkyIC0zODkgMjIgLTg5IDI1IC00MTcgNCAtNTQ0IC0zMiAtMTk4IC0xMTQgLTQwNiAtMjEwIC01MzIKLTE2NSAtMjE3IC00NjQgLTM2NiAtODQzIC00MTggbC04NyAtMTIgMzkgLTQ5IGM0NyAtNjAgODUgLTEzNyAxMDYgLTIyMSAxNAotNTIgMTcgLTEzNyAyMCAtNTAzIDUgLTQ5MCA1IC00ODkgNzIgLTUyMSA0NiAtMjEgODMgLTE1IDIyOSA0MiA3MzggMjg0IDEzMjAKOTMyIDE1MzMgMTcwMyAxNDEgNTEzIDExMSAxMTA4IC04MCAxNjAxIC0xNzIgNDQwIC00NzUgODQyIC04NDggMTEyMiAtNDA1CjMwMyAtODY1IDQ3NCAtMTM2NyA1MDcgLTE3NSAxMiAtMTkyIDEyIC0zNzUgMHoiLz4KPC9nPgo8L3N2Zz4K"
+linkedin = "PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iNTEyLjAwMDAwMHB0IiBoZWlnaHQ9IjUxMi4wMDAwMDBwdCIgdmlld0JveD0iMCAwIDUxMi4wMDAwMDAgNTEyLjAwMDAwMCIKIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgoKPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNTEyLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSIKZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSJub25lIj4KPHBhdGggZD0iTTM5NSA1MTEwIGMtMTc2IC0yOCAtMzEyIC0xNDUgLTM3MSAtMzIwIC0xOCAtNTMgLTE5IC0xMzAgLTE5IC0yMjMwCjAgLTIxMDAgMSAtMjE3NyAxOSAtMjIzMCA0OSAtMTQ2IDE0OCAtMjQ3IDI5NCAtMzAzIGw1NyAtMjIgMjE4NSAwIDIxODUgMCA1NwoyMiBjMTQ2IDU2IDI0NSAxNTcgMjk0IDMwMyAxOCA1MyAxOSAxMzAgMTkgMjIzMCAwIDIxMDAgLTEgMjE3NyAtMTkgMjIzMCAtNDkKMTQ2IC0xNDggMjQ3IC0yOTQgMzAzIGwtNTcgMjIgLTIxNTAgMSBjLTExODIgMSAtMjE3MiAtMiAtMjIwMCAtNnogbTg4MCAtNTY1CmMyMDcgLTQ0IDM4MiAtMjE4IDQyNCAtNDIzIDc4IC0zNzYgLTI2MiAtNzI0IC02MzQgLTY0OSAtMjAwIDQxIC0zNTUgMTc1Ci00MjEgMzY2IC0zMSA4OSAtMzUgMjI4IC05IDMxOCA0MiAxNDggMTUwIDI3NiAyODkgMzQzIDEyNCA2MCAyMjIgNzIgMzUxIDQ1egptMjYyNSAtMTI5OCBjMTY5IC00NCAyNzYgLTEwNCAzODMgLTIxNSAxNjYgLTE3MCAyNTMgLTM5OSAyODggLTc1NyA5IC05MSAxMwotMzUzIDE0IC04NzUgMCAtNzAyIC0xIC03NDcgLTE4IC03NzMgLTEwIC0xNiAtMzIgLTM3IC01MCAtNDcgLTMwIC0xOSAtNTMKLTIwIC0zNjUgLTIwIC0zNjMgMCAtMzcwIDEgLTQxMSA1OCAtMTkgMjggLTIwIDQ2IC0yNCA3NjMgLTMgNjIzIC02IDc0NCAtMTkKNzk5IC0zOCAxNTQgLTk4IDI1NCAtMTg4IDMwOCAtNzggNDYgLTEyMSA1NyAtMjM1IDU2IC0xMzEgMCAtMTkyIC0yMyAtMjc5Ci0xMDUgLTcyIC02NyAtMTIzIC0xNTkgLTE1OSAtMjg3IC0yMSAtNzUgLTIyIC05NyAtMjcgLTc5MiAtNSAtNjY4IC02IC03MTcKLTIzIC03NDIgLTM4IC01NSAtNTYgLTU4IC00MDQgLTU4IC0zNTYgMCAtMzY4IDIgLTQwNSA3MSAtMTcgMzIgLTE4IDkyIC0xOAoxMjY3IDAgMTM2OCAtNCAxMjgxIDY0IDEzMjMgMjkgMTggNTYgMTkgMzYxIDE5IDMxMCAwIDMzMiAtMSAzNjIgLTIwIDUyIC0zMQo2MyAtNjQgNjMgLTE5MiBsMSAtMTEzIDIyIDMwIGM3NCAxMDIgMjAyIDIwNiAzMDkgMjUzIDE0MSA2MSAyNzEgODIgNDg4IDc4CjE0NyAtMyAxOTAgLTggMjcwIC0yOXogbS0yMzc5IC0zMCBjMTkgLTEyIDQyIC0zOCA1MiAtNTcgMTYgLTMzIDE3IC0xMDkgMTUKLTEyNzIgLTMgLTEyMzMgLTMgLTEyMzcgLTI0IC0xMjY1IC00NSAtNjEgLTU4IC02MyAtNDAyIC02MyAtMzM4IDAgLTM0MSAwCi0zOTIgNTUgbC0yNSAyNyAtMyAxMjUwIGMtMiAxMjA2IC0yIDEyNTIgMTYgMTI4MCAxMSAxNiAzMiAzOCA0OCA0OSAyNyAxOCA1MQoxOSAzNTUgMTkgMzIyIDAgMzI2IDAgMzYwIC0yM3oiLz4KPC9nPgo8L3N2Zz4K"
+linkedin_html = r'<a href="https://www.linkedin.com/in/kadenmckeen/" target="_blank"><img width="7%%" src="data:image/svg+xml;base64, %s"/></a>' % linkedin
+github_html = r'<a href="https://github.com/KadenMc/" target="_blank"><img width="7%%" src="data:image/svg+xml;base64,%s"/></a>' % github
+html = """
   <style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  <div class="img-container"> <!-- Block parent element -->
-    <img src="icons/linkedin.png" alt="LinkedIn">
-  </div>
-  """, unsafe_allow_html=True)
+    .img-container {
+      text-align: center;
+    }
+  </style>
+  
+  <div class="img-container">""" + linkedin_html + '&nbsp;'*5 + github_html + "</div>"
+st.write(html, unsafe_allow_html=True)
 
-st.markdown("[![Foo](icons/linkedin.png)](http://google.com.au/)")
 
 st.markdown('## Summary', unsafe_allow_html=True)
 st.info('''
-- An applied machine learning intern at the Vector Institute.
-- A machine learning researcher at Sunnybrook's BrainLab.
-- A 4th year Computer Science student at the University of Toronto.
+- Applied machine learning intern at the Vector Institute
+- Machine learning researcher at Sunnybrook's BrainLab
+- 4th year Computer Science student at the University of Toronto
 ''')
 
 #####################
 # Navigation
-
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
-
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #16A2CB;">
   <a class="navbar-brand" href="https://www.linkedin.com/in/kadenmckeen/" target="_blank">Kaden McKeen</a>
@@ -61,50 +56,17 @@ st.markdown("""
         <a class="nav-link" href="#projects">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#work-experience">Work Experience</a>
+        <a class="nav-link" href="#publications">Publications</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#bioinformatics-tools">Bioinformatics Tools</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#social-media">Social Media</a>
+        <a class="nav-link" href="https://kadenmc.github.io/cv/cv.html" target="_blank">CV</a>
       </li>
     </ul>
   </div>
 </nav>
 """, unsafe_allow_html=True)
 
-#####################
-# Custom function for printing text
-def txt(a, b):
-  col1, col2 = st.columns([4,1])
-  with col1:
-    st.markdown(a)
-  with col2:
-    st.markdown(b)
 
-def txt2(a, b):
-  col1, col2 = st.columns([1,4])
-  with col1:
-    st.markdown(f'`{a}`')
-  with col2:
-    st.markdown(b)
-
-def txt3(a, b):
-  col1, col2 = st.columns([1,2])
-  with col1:
-    st.markdown(a)
-  with col2:
-    st.markdown(b)
-  
-def txt4(a, b, c):
-  col1, col2, col3 = st.columns([1.5,2,2])
-  with col1:
-    st.markdown(f'`{a}`')
-  with col2:
-    st.markdown(b)
-  with col3:
-    st.markdown(c)
 
 #####################
 st.markdown('''
@@ -112,189 +74,78 @@ st.markdown('''
 ''')
 
 st.markdown('''
-  <head>
-    <meta charset="UTF-8">
-    <title>Kaden McKeen - Projects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-
-<section class="main-content">
-
-  <h3><b>BrainLab</b> – Unsupervised Image Registration</h3>
+  <h4>BrainLab – Unsupervised Image Registration</h4>
 	GitHub - <i>Coming soon!</i><br><br>
 
-  Developing a pipeline for deformable, unsupervised, pairwise image registration under the tutorage of Dr. Maged Goubran &amp; Ahmadreza Attarpour at Sunnybrook's <a href="http://brainlab.ca">BrainLab</a>.<br>
+  Developing a pipeline for deformable, unsupervised, pairwise image registration under the tutorage of Dr. Maged Goubran &amp; Ahmadreza Attarpour at Sunnybrook's <a href="http://brainlab.ca" target="_blank">BrainLab</a>.<br>
+  <br><br>
+''', unsafe_allow_html=True)
 
-  <h3><b>LearnAI</b> – UofT AI's Director of Education &amp; LearnAI Lead</h3>
+st.markdown('''
+  <h4>LearnAI – UofT AI's Director of Education &amp; LearnAI Lead</h4>
 
-  <a href="./projects/LearnAI-2021Syllabus.pdf">Syllabus</a> - 2021-2022 LearnAI Syllabus<br><br>
+  <a href="https://kadenmc.github.io/projects/LearnAI-2021Syllabus.pdf" target="_blank">Syllabus</a> - 2021-2022 LearnAI Syllabus<br>
+''', unsafe_allow_html=True)
 
-	UofT AI is a club at the University of Toronto; LearnAI, its course, teaches U of T undergraduates practical ML.<br><br>
+st.markdown('''
+	UofT AI is a club at the University of Toronto; LearnAI, its subsidiary course, teaches U of T undergraduates practical ML. I proudly spearheaded LearnAI as the club Director of Education for three years.<br>
 
-  I proudly spearheaded LearnAI as the club Director of Education for three years.<br><br>
+  In 2021, we partnered with <a href="https://ai-commons.org/" target="_blank">AI Commons</a> to expand our reach and empower people in emerging countries!
+  <br><br>
 
-  We partnered with <a href="https://ai-commons.org/">AI Commons</a> to expand our reach and empower people in emerging countries!
+  <h4>notMNIST – PyTorch Letter Classification Model</h4>
+  <a href="https://github.com/KadenMc/notMNIST_model" target="_blank">GitHub</a><br><br>
 
-  <h3><b>notMNIST</b> – PyTorch Letter Classification Model</h3>
-  <a href="https://github.com/KadenMc/notMNIST_model">GitHub</a><br><br>
-
-  This classification project on the notMNIST_small dataset was an exercise in proper argument parsing, visualization, and using TensorBoard with PyTorch.
+  This classification project on the `notMNIST_small` dataset was an exercise in proper argument parsing, visualization, and using TensorBoard with PyTorch.
   It was also an exploration of PyTorch’s dataloaders (such as ImageFolder), transforms, optimizers, and sequential modelling functionalities!
+  <br><br>
 
-  <h3><b>Illegible</b> – Full-Page Preprocessing for Handwriting Recognition</h3>
-  <a href="https://github.com/KadenMc/PreprocessingHTR">GitHub</a><br><br>
+  <h4>Illegible – Full-Page Preprocessing for Handwriting Recognition</h4>
+  <a href="https://github.com/KadenMc/PreprocessingHTR" target="_blank">GitHub</a><br><br>
+''', unsafe_allow_html=True)
 
+st.markdown('''
 	This project was an exercise in computer vision preprocessing: Take an image of a full-page handwritten document and prepare it as singular word images for offline handwriting recognition.<br><br>
 
-  <img src="./projects/PreprocessingConversion.png" style="max-height: 300px; border-radius:50px; margin-left: 25%;" />
+  <img src="https://kadenmc.github.io/projects/PreprocessingConversion.png" style="max-height: 300px; border-radius:50px; margin-left: 25%;" />
+  <br><br>
 
-  <h3><b>Reincarnating Bob Ross</b> – Character-Level LSTM on YouTube Transcripts</h3>
-	<a href="https://github.com/KadenMc/TranscriptGeneratingLSTM">GitHub</a><br><br>
+  <h4>Reincarnating Bob Ross – Text Generation of YouTube Transcripts</h4>
+	<a href="https://github.com/KadenMc/TranscriptGeneratingLSTM" target="_blank">GitHub</a><br><br>
+''', unsafe_allow_html=True)
 
-	Perform LSTM character-level generation on automatically extracted YouTube transcripts. I tackled this project to recreate the late Bob Ross' painting videos:<br><br>
+st.markdown('''
+	Perform LSTM character-level generation on automatically extracted YouTube transcripts. I tackled this project to recreate the late Bob Ross' painting videos:<br>
 
-  <b>Prompt</b>: “welcome back. certainly glad you could join us today, it's a fantastic day here. let's have them run all”<br><br>
+  <b>Prompt</b>: “welcome back. certainly glad you could join us today, it's a fantastic day here. let's have them run all”<br>
 
   <b>Generated</b>: ... “the colors across the screen, there we go. now then, we'll take a little bit of the bright-red and let's put some of the same colors and then we'll put a little bit of the bright-red in the sky. there we go. now, little touch of the bristles, we'll go right into the yellow-ochre”
+  <br><br>
+
+  <h4><a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">Facing Racial Bias</a> – Unbiased Emotion Recognition</h4>
+	<a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">GitHub</a> - <i>Work in progress</i><br><br>
   
-  <h3><b>Facing Racial Bias</b> – Developing An Unbiased Emotion Recognition Method</h3>
-	<a href="https://github.com/KadenMc/EmotionRecognition">GitHub</a> - <i>Work in progress</i><br><br>
-  
-  Emotion recognition is fraught with <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3281765">racial bias</a>, which I aim to investigate and minimize.<br><br>
-
-<footer class="site-footer">
-</footer>
-
-</section>  
-
-
-
+  Emotion recognition is fraught with <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3281765" target="_blank">racial bias</a>, which I aim to investigate and minimize.<br><br>
 ''', unsafe_allow_html=True)
 
 
-txt('**BrainLab** - Unsupervised Image Registration', '2002-2006')
 st.markdown('''
-- GPA: `3.89`
-- Research thesis entitled `Computer-aided molecular design for biological and chemical applications : Quantum chemical and machine learning approach`.
-- Received Royal Golden Jubilee Ph.D. Scholarship of `2.152 million THB` covering tuition and stipend.
-- Thesis awarded `1st` Prize by the National Research Council of Thailand.
+## Publications
 ''')
 
-txt('**Bachelors of Science** (Biological Science), *Mahidol University International College*, Thailand',
-'1998-2002')
 st.markdown('''
-- GPA: `3.65`
-- Graduated with First Class Honors.
-''')
-
-#####################
-st.markdown('''
-## Work Experience
-''')
-
-txt('**Head, Center of Data Mining and Biomedical Informatics**, Faculty of Medical Technology, Mahidol University, Thailand',
-'2011-2021')
-st.markdown('''
-- Managing a Center of `10` professors, researchers and students to ensure KPIs are strategically achieved namely to publish at least `20+` research publications annually. 
-- Actively took part in the talent hiring process as well as help employees to plan and develop their career path.
-- Set budget and handle procurement in order to facilitate education and research activities. Secured `> 10 million THB` budget.
-- Set and reflect on OKR on an annual basis to ensure productivity strategically matches the organization's direction.
-''')
-
-txt('**Associate Professor**, Faculty of Medical Technology, Mahidol University, Thailand',
-'2012-2021')
-txt('**Assistant Professor**, Faculty of Medical Technology, Mahidol University, Thailand',
-'2009-2012')
-txt('**Lecturer**, Faculty of Medical Technology, Mahidol University, Thailand',
-'2006-2009')
-st.markdown('''
-- Provided mentorship and supervision to junior faculty, researchers, Ph.D./M.Sc./B.Sc. students. Mentored `3` Post-doctoral fellows, supervised `13` Ph.D. students, supervised `8` M.Sc. students, supervised `13` B.Sc. students and hosted `6` visiting students from U.S., Sweden and India.
-- Wrote and applied for research grants. Served as Principal Investigator for research grants that have been awarded `12.5 million THB` and `1.117 million SEK` in research funding from Thai and Swedish grant agencies.
-- Conducted research by applying machine learning to computational drug discovery and ensuring that research output exceeds `20+` articles per year.
-- Taught `10+` undergraduate/graduate classes on Bioinformatics, Data Mining, Scientific Research and Presentation, Research Methodology, Graduate Seminar, Programming for Health Data Science, etc.
-- Peer reviewed `100+` research articles for leading scientific journals.
-''')
-
-txt('**Co-Chair**, International Conference on Pharmaceutical Bioinformatics at Pattaya, Thailand',
-'2016')
-st.markdown('''
-- Oversee all aspects of the conference preparations from conception to launch. This include inviting keynote and plenary speakers, create advertisement flyers, create abstract book, etc.
-- Conference attracted `200+` participants from `40+` countries from university and industry sector.
-- Chaired keynote session, technical workshop and some of the parallel sessions.
-''')
-
-txt('**Content Creator**, [Data Professor YouTube Channel](https://youtube.com/dataprofessor/)',
-'2019-Present')
-st.markdown('''
-- `100,000+` subscribers on YouTube
-- Created `261` educational videos on data science, machine learning and bioinformatics as well as hosted several podcast episodes with data scientists.
-- Created `3` sponsored videos for Notion, Gradio and Classpert.
-''')
-
-txt('**Content Creator**, [Coding Professor YouTube Channel](https://youtube.com/codingprofessor/)',
-'2019-Present')
-st.markdown('''
-- `3,200+` subscribers on YouTube
-- Created `38` educational videos on Python and R programming.
-''')
-
-txt('**Technical Writer**, [Data Professor Blog](https://data-professor.medium.com/) on Medium.com',
-'2019-Present')
-st.markdown('''
-- `4,100+` subscribers on Medium
-- Written `68` technical blogs on data science, machine learning and bioinformatics.
-''')
-
-#####################
-st.markdown('''
-## Bioinformatics Tools
-''')
-txt4('ABCpred', 'A web server for the discovery of acetyl- and butyryl-cholinesterase inhibitors', 'http://codes.bio/abcpred/')
-txt4('AutoWeka', 'An automated data mining software based on Weka', 'http://www.mt.mahidol.ac.th/autoweka/')
-txt4('ACPred', 'A computational tool for the prediction and analysis of anticancer peptides','http://codes.bio/acpred/')
-txt4('BioCurator', 'A web server for curating ChEMBL bioactivity data', 'http://codes.bio/biocurator/')
-txt4('CryoProtect', 'A web server for classifying antifreeze proteins from non-antifreeze proteins','http://codes.bio/cryoprotect/')
-txt4('ERpred', 'A web server for the prediction of subtype-specific estrogen receptor antagonists', 'http://codes.bio/erpred')
-txt4('HCVpred', 'A web server for predicting the bioactivity of Hepatitis C virus NS5B inhibitors', 'http://codes.bio/hemopred/')
-txt4('HemoPred', 'A web server for predicting the hemolytic activity of peptides', 'http://codes.bio/hemopred/')
-txt4('iQSP', 'A sequence-based tool for the prediction and analysis of quorum sensing peptides', 'http://codes.bio/iqsp/')
-txt4('Meta-iAVP', 'A sequence-based meta-predictor for improving the prediction of antiviral peptides', 'http://codes.bio/meta-iavp/')
-txt4('osFP', 'A web server for predicting the oligomeric state of fluorescent proteins', 'http://codes.bio/osfp/')
-txt4('PAAP', 'A web server for predicting antihypertensive activity of peptides', 'http://codes.bio/paap/')
-txt4('PepBio', 'A web server for predicting the bioactivity of host defense peptide', 'http://codes.bio/pepbio')
-txt4('PyBact', 'Open source software written in Python for bacterial identification', 'https://sourceforge.net/projects/pybact/')
-txt4('TargetAntiAngio', 'A sequence-based tool for the prediction and analysis of anti-angiogenic peptides','http://codes.bio/targetantiangio/')
-txt4('ThalPred', 'Development of decision model for discriminating Thalassemia trait and Iron deficiency anemia','http://codes.bio/thalpred/')
-txt4('THPep', 'A web server for predicting tumor homing peptides','http://codes.bio/thpep/')
-
-
-#####################
-st.markdown('''
-## Skills
-''')
-txt3('Programming', '`Python`, `R`, `Linux`')
-txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
-txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `altair`, `ggplot2`')
-txt3('Machine Learning', '`scikit-learn`')
-txt3('Deep Learning', '`TensorFlow`')
-txt3('Web development', '`Flask`, `HTML`, `CSS`')
-txt3('Model deployment', '`streamlit`, `gradio`, `R Shiny`, `Heroku`, `AWS`, `Digital Ocean`')
-
-#####################
-st.markdown('''
-## Social Media
-''')
-txt2('LinkedIn', 'https://www.linkedin.com/in/chanin-nantasenamat')
-txt2('Twitter', 'https://twitter.com/thedataprof')
-txt2('GitHub', 'https://github.com/chaninn/')
-txt2('', 'https://github.com/chaninlab/')
-txt2('', 'https://github.com/dataprofessor')
-txt2('ORCID', 'http://orcid.org/0000-0003-1040-663X')
-txt2('Scopus', 'http://www.scopus.com/authid/detail.url?authorId=12039071300')
-txt2('ResearcherID', 'http://www.researcherid.com/rid/F-1021-2010')
-txt2('ResearchGate', 'https://www.researchgate.net/profile/Chanin_Nantasenamat')
-txt2('Publons', 'https://publons.com/a/303133/')
+<section class="main-content">
+  Coming soon:
+  <br>
+  <br>
+	<ol>
+		<li>
+      Unsupervised deep-learning method for deformable, pairwise brain tissue image registration on tissue cleared microscopy data
+      <p class="lisub">Research at Sunnybrook's BrainLab under Dr. Maged Goubran &amp; Ahmadreza Attarpour</p>
+    </li><br>
+		<li>
+      Deep-learning framework for personalized offline handwritten text recognition
+    </li>
+	</ol>
+</section>
+''', unsafe_allow_html=True)
