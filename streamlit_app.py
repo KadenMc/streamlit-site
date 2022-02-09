@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import re
 
 st.set_page_config(page_title="Kaden McKeen")#, layout="wide")
 
@@ -37,6 +38,9 @@ st.info('''
 - Machine learning researcher at Sunnybrook's BrainLab
 - 4th year Computer Science student at the University of Toronto
 ''')
+
+st.markdown('<img src="https://kadenmc.github.io/assets/Icon.png" style="max-height: 300px; border-radius:50px; margin-left: 10%;" />', \
+  unsafe_allow_html=True)
 
 #####################
 # Navigation
@@ -115,13 +119,24 @@ st.markdown('''
 ''', unsafe_allow_html=True)
 
 st.markdown('''
-	Perform LSTM character-level generation on automatically extracted YouTube transcripts. I tackled this project to recreate the late Bob Ross' painting videos:<br>
+	Perform LSTM character-level generation on automatically extracted YouTube transcripts. I tackled this project to recreate the late Bob Ross' painting videos.<br>
+''', unsafe_allow_html=True)
 
-  <b>Prompt</b>: “welcome back. certainly glad you could join us today, it's a fantastic day here. let's have them run all”<br>
+# === TEXT GENERATION DEMO ===
+col1, col2 = st.columns([1, 1])
+length = col1.number_input(label="Length", min_value=1, max_value=200, value=100, step=20)
+diversity = col2.number_input(label="Diversity", min_value=0., max_value=1., value=0.5, step=0.1,format="%.2f")
 
-  <b>Generated</b>: ... “the colors across the screen, there we go. now then, we'll take a little bit of the bright-red and let's put some of the same colors and then we'll put a little bit of the bright-red in the sky. there we go. now, little touch of the bristles, we'll go right into the yellow-ochre”
+input = st.text_input("Prompt:")
+if input != "":
+  with st.spinner('Loading...'):
+    import textGeneration.demo  as tgd
+    st.success(tgd.demo(input, length, diversity))
+
+
+
+st.markdown('''
   <br><br>
-
   <h4><a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">Facing Racial Bias</a> – Unbiased Emotion Recognition</h4>
 	<a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">GitHub</a> - <i>Work in progress</i><br><br>
   
