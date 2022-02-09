@@ -25,7 +25,7 @@ def main():
 
     ''', unsafe_allow_html=True)
 
-    st.warning("GitHub coming soon!")
+    st.warning("GitHub - Coming Soon!")
 
     st.markdown('''
     <br>
@@ -37,7 +37,7 @@ def main():
         UofT AI is a club at the University of Toronto; LearnAI, its subsidiary course, teaches U of T undergraduates practical ML. I proudly spearheaded LearnAI as the club Director of Education for three years.<br>
 
     In 2021, we partnered with <a href="https://ai-commons.org/" target="_blank">AI Commons</a> to expand our reach and empower people in emerging countries!
-    <br><br>''', unsafe_allow_html=True)
+    <br>''', unsafe_allow_html=True)
 
     st.markdown('''
     ### 2021
@@ -60,7 +60,7 @@ def main():
     <div class="img-container"><img src="https://kadenmc.github.io/projects/PreprocessingConversion.png" width="75%%" style="border-radius:50px;"/></div>
     ''', unsafe_allow_html=True)
 
-    st.warning("Demo coming soon!")
+    st.warning("Demo - Coming Soon!")
 
     st.markdown('''
     <br>
@@ -70,6 +70,8 @@ def main():
     st.markdown('''
         Perform LSTM character-level generation on automatically extracted YouTube transcripts. I tackled this project to recreate the late Bob Ross' painting videos.<br>
     ''', unsafe_allow_html=True)
+
+    st.success("Text Generation Demo")
 
     # === TEXT GENERATION DEMO ===
     col1, col2 = st.columns([1, 1])
