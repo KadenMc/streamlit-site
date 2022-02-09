@@ -6,7 +6,10 @@ import home
 import projects
 import publications
 
-st.set_page_config(page_title="Kaden McKeen")
+st.set_page_config(
+  page_title="Kaden McKeen",
+  page_icon="🤖"
+)
 
 
 
