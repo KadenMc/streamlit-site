@@ -112,6 +112,11 @@ st.markdown('''
 	This project was an exercise in computer vision preprocessing: Take an image of a full-page handwritten document and prepare it as singular word images for offline handwriting recognition.<br><br>
 
   <img src="https://kadenmc.github.io/projects/PreprocessingConversion.png" style="max-height: 300px; border-radius:50px; margin-left: 25%;" />
+''', unsafe_allow_html=True)
+
+st.warning("Demo coming soon!")
+
+st.markdown('''
   <br><br>
 
   <h4>Reincarnating Bob Ross – Text Generation of YouTube Transcripts</h4>
