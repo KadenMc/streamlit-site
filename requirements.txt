@@ -1,5 +1,8 @@
 streamlit==1.0
 
+# For navbar
+hydralit-components==1.0.9
+
 # For text generation model
 numpy==1.18.5
 tensorflow==2.3.0
