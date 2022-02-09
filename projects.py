@@ -6,7 +6,20 @@ def main():
     ''')
 
     st.markdown('''
-    <h4><a href="http://brainlab.ca" target="_blank">BrainLab</a> – Unsupervised Image Registration</h4>
+    ### 2022
+    ''')
+
+    st.markdown('''
+    <h4><a href="https://vectorinstitute.ai" target="_blank">Vector Institute</a> – Cyclops: An Evaluative Framework for Clinical ML</h4>
+
+    Performing feature extraction, developing models, and practicing MLOps for project Cyclops.<br><br>
+    Cyclops is a continuous evaluative framework of clinical machine learning models currently being developed and validated on datasets GEMINI and MIMIC-IV with targets delirium and length of stay.<br><br>
+    The MLOps framework consists of monitoring and evaluation tools capable of testing model performance and generalizability across time and hospitals using drift detection methods.<br><br>
+
+    ''', unsafe_allow_html=True)
+
+    st.markdown('''
+    <h4><a href="http://brainlab.ca" target="_blank">BrainLab</a> – Unsupervised 3D Image Registration</h4>
 
     Developing a pipeline for deformable, unsupervised, pairwise image registration under the tutorage of Dr. Maged Goubran &amp; Ahmadreza Attarpour at Sunnybrook's BrainLab.<br>
 
@@ -24,11 +37,16 @@ def main():
         UofT AI is a club at the University of Toronto; LearnAI, its subsidiary course, teaches U of T undergraduates practical ML. I proudly spearheaded LearnAI as the club Director of Education for three years.<br>
 
     In 2021, we partnered with <a href="https://ai-commons.org/" target="_blank">AI Commons</a> to expand our reach and empower people in emerging countries!
-    <br><br>
+    <br><br>''', unsafe_allow_html=True)
 
-    <h4><a href="https://github.com/KadenMc/notMNIST_model" target="_blank">notMNIST</a> – PyTorch Letter Classification Model</h4>
+    st.markdown('''
+    ### 2021
+    ''')
 
-    This classification project on the `notMNIST_small` dataset was an exercise in proper argument parsing, visualization, and using TensorBoard with PyTorch.
+    st.markdown('''
+    <h4><a href="https://github.com/KadenMc/notMNIST_model" target="_blank">notMNIST</a> – Letter Classification Model</h4>
+
+    This classification project on the `notMNIST_small` dataset was more an exercise in proper argument parsing, visualization, and using TensorBoard with PyTorch.
     It was also an exploration of PyTorch’s dataloaders (such as ImageFolder), transforms, optimizers, and sequential modelling functionalities!
     <br><br>
 
@@ -55,8 +73,8 @@ def main():
 
     # === TEXT GENERATION DEMO ===
     col1, col2 = st.columns([1, 1])
-    length = col1.number_input(label="Length", min_value=1, max_value=200, value=100, step=20)
-    diversity = col2.number_input(label="Diversity", min_value=0., max_value=1., value=0.5, step=0.1,format="%.2f")
+    length = col1.number_input(label="Length", min_value=1, max_value=200, value=100, step=1)
+    diversity = col2.number_input(label="Diversity (Temperature/Generation 'Randomness')", min_value=0.1, max_value=0.9, value=0.5, step=0.1,format="%.2f")
 
     input = st.text_input("Prompt:")
     if input != "":
@@ -70,5 +88,5 @@ def main():
     <br>
     <h4><a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">Facing Racial Bias</a> – Unbiased Emotion Recognition</h4>
     
-    Emotion recognition is fraught with <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3281765" target="_blank">racial bias</a>, which I aim to investigate and minimize.<br><br>
+    Emotion recognition is fraught with racial bias, which I aim to investigate and minimize.<br><br>
     ''', unsafe_allow_html=True)

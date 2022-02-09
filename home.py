@@ -4,7 +4,7 @@ from PIL import Image
 def main():
     st.markdown("""
     <style>.container { text-align: center; } </style>
-    <div class="container"><h1>Kaden McKeen</h1></div>"
+    <div class="container"><h1>Kaden McKeen</h1></div>
     """, unsafe_allow_html=True)
 
     # Centered headshot image
