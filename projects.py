@@ -13,7 +13,7 @@ def main():
     <h4><a href="https://vectorinstitute.ai" target="_blank">Vector Institute</a> – Cyclops: An Evaluative Framework for Clinical ML</h4>
 
     Performing feature extraction, developing models, and practicing MLOps for project Cyclops.<br><br>
-    Cyclops is a continuous evaluative framework of clinical machine learning models currently being developed and validated on datasets GEMINI and MIMIC-IV with targets delirium and length of stay.<br><br>
+    Cyclops is a continuous evaluative framework of clinical machine learning models currently being developed and validated on datasets <a href="https://www.geminimedicine.ca" target="_blank">GEMINI</a> and <a href="https://mimic.mit.edu/docs/iv" target="_blank">MIMIC-IV</a> with targets delirium and length of stay.<br><br>
     The MLOps framework consists of monitoring and evaluation tools capable of testing model performance and generalizability across time and hospitals using drift detection methods.<br><br>
 
     ''', unsafe_allow_html=True)
