@@ -54,7 +54,7 @@ st.markdown("""
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link disabled" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="https://share.streamlit.io/kadenmc/streamlit-site/main">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#projects">Projects</a>
@@ -78,17 +78,18 @@ st.markdown('''
 ''')
 
 st.markdown('''
-  <h4>BrainLab – Unsupervised Image Registration</h4>
-	GitHub - <i>Coming soon!</i><br><br>
+  <h4><a href="http://brainlab.ca" target="_blank">BrainLab</a> – Unsupervised Image Registration</h4>
 
-  Developing a pipeline for deformable, unsupervised, pairwise image registration under the tutorage of Dr. Maged Goubran &amp; Ahmadreza Attarpour at Sunnybrook's <a href="http://brainlab.ca" target="_blank">BrainLab</a>.<br>
-  <br><br>
+  Developing a pipeline for deformable, unsupervised, pairwise image registration under the tutorage of Dr. Maged Goubran &amp; Ahmadreza Attarpour at Sunnybrook's BrainLab.<br>
+
 ''', unsafe_allow_html=True)
 
-st.markdown('''
-  <h4>LearnAI – UofT AI's Director of Education &amp; LearnAI Lead</h4>
+st.warning("GitHub coming soon!")
 
-  <a href="https://kadenmc.github.io/projects/LearnAI-2021Syllabus.pdf" target="_blank">Syllabus</a> - 2021-2022 LearnAI Syllabus<br>
+st.markdown('''
+  <br>
+  
+  <h4><a href="https://kadenmc.github.io/projects/LearnAI-2021Syllabus.pdf" target="_blank">LearnAI</a> – UofT AI's Director of Education &amp; LearnAI Lead</h4>
 ''', unsafe_allow_html=True)
 
 st.markdown('''
@@ -97,15 +98,13 @@ st.markdown('''
   In 2021, we partnered with <a href="https://ai-commons.org/" target="_blank">AI Commons</a> to expand our reach and empower people in emerging countries!
   <br><br>
 
-  <h4>notMNIST – PyTorch Letter Classification Model</h4>
-  <a href="https://github.com/KadenMc/notMNIST_model" target="_blank">GitHub</a><br><br>
+  <h4><a href="https://github.com/KadenMc/notMNIST_model" target="_blank">notMNIST</a> – PyTorch Letter Classification Model</h4>
 
   This classification project on the `notMNIST_small` dataset was an exercise in proper argument parsing, visualization, and using TensorBoard with PyTorch.
   It was also an exploration of PyTorch’s dataloaders (such as ImageFolder), transforms, optimizers, and sequential modelling functionalities!
   <br><br>
 
-  <h4>Illegible – Full-Page Preprocessing for Handwriting Recognition</h4>
-  <a href="https://github.com/KadenMc/PreprocessingHTR" target="_blank">GitHub</a><br><br>
+  <h4><a href="https://github.com/KadenMc/PreprocessingHTR" target="_blank">Illegible</a> – Full-Page Preprocessing for Handwriting Recognition</h4>
 ''', unsafe_allow_html=True)
 
 st.markdown('''
@@ -117,10 +116,9 @@ st.markdown('''
 st.warning("Demo coming soon!")
 
 st.markdown('''
-  <br><br>
+  <br>
 
-  <h4>Reincarnating Bob Ross – Text Generation of YouTube Transcripts</h4>
-	<a href="https://github.com/KadenMc/TranscriptGeneratingLSTM" target="_blank">GitHub</a><br><br>
+  <h4><a href="https://github.com/KadenMc/TranscriptGeneratingLSTM" target="_blank">Reincarnating Bob Ross</a> – Text Generation of YouTube Transcripts</h4>
 ''', unsafe_allow_html=True)
 
 st.markdown('''
@@ -141,9 +139,8 @@ if input != "":
 
 
 st.markdown('''
-  <br><br>
+  <br>
   <h4><a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">Facing Racial Bias</a> – Unbiased Emotion Recognition</h4>
-	<a href="https://github.com/KadenMc/EmotionRecognition" target="_blank">GitHub</a> - <i>Work in progress</i><br><br>
   
   Emotion recognition is fraught with <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3281765" target="_blank">racial bias</a>, which I aim to investigate and minimize.<br><br>
 ''', unsafe_allow_html=True)
