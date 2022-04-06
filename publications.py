@@ -20,9 +20,6 @@ def main():
             <li class="normal">
                 <p class="normal">Unsupervised deep-learning method for deformable, pairwise brain tissue image registration on tissue cleared microscopy data</p>
                 <p class="sub">Research at Sunnybrook's BrainLab under Dr. Maged Goubran &amp; Ahmadreza Attarpour</p>
-            </li><br>
-            <li class="normal">
-                <p class="normal">Deep-learning framework for personalized offline handwritten text recognition</p>
             </li>
         </ol>
     </section>
