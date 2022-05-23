@@ -1,5 +1,10 @@
 import streamlit as st
 
+def checkout_cv():
+    st.markdown('''
+    For up-to-date information, check out <a href="https://kadenmc.github.io/cv/cv.html" target="_blank">my CV</a>!
+    ''', unsafe_allow_html=True)
+
 def main():
     st.markdown('''
     ## Projects
@@ -10,34 +15,26 @@ def main():
     ''')
 
     st.markdown('''
-    <h4><a href="https://vectorinstitute.ai" target="_blank">Vector Institute</a> – Cyclops: An Evaluative Framework for Clinical ML</h4>
-
-    Performing feature extraction, developing models, and practicing MLOps for project Cyclops.<br><br>
-    Cyclops is a continuous evaluative framework of clinical machine learning models currently being developed and validated on datasets <a href="https://www.geminimedicine.ca" target="_blank">GEMINI</a> and <a href="https://mimic.mit.edu/docs/iv" target="_blank">MIMIC-IV</a> with targets delirium and length of stay.<br><br>
-    The MLOps framework consists of monitoring and evaluation tools capable of testing model performance and generalizability across time and hospitals using drift detection methods.<br><br>
-
+    <h4><a href="https://vectorinstitute.ai" target="_blank">Vector Institute</a> – CyclOps: An Evaluation Framework for Clinical ML</h4>
     ''', unsafe_allow_html=True)
+    
+    checkout_cv()
 
     st.markdown('''
-    <h4><a href="http://brainlab.ca" target="_blank">BrainLab</a> – Unsupervised 3D Image Registration</h4>
-
-    Developing a pipeline for deformable, unsupervised, pairwise image registration under the tutorage of Dr. Maged Goubran &amp; Ahmadreza Attarpour at Sunnybrook's BrainLab.<br>
-
+    <h4><a href="http://brainlab.ca" target="_blank">BrainLab</a> – <a href="https://github.com/KadenMc/MONAIRegistration" target="_blank">Unsupervised 3D Image Registration</a></h4>
     ''', unsafe_allow_html=True)
 
-    st.warning("GitHub - Coming Soon!")
+    checkout_cv()
 
+    st.markdown('''
+    <h4><a href="https://www.uoft.ai/" target="_blank">UofT AI</a> - Director of Education &amp; <a href="https://kadenmc.github.io/projects/LearnAI-2021Syllabus.pdf" target="_blank">LearnAI</a> Lead</h4>
+    ''', unsafe_allow_html=True)
+
+    checkout_cv()
+    
     st.markdown('''
     <br>
-    
-    <h4><a href="https://kadenmc.github.io/projects/LearnAI-2021Syllabus.pdf" target="_blank">LearnAI</a> – UofT AI's Director of Education &amp; LearnAI Lead</h4>
     ''', unsafe_allow_html=True)
-
-    st.markdown('''
-        UofT AI is a club at the University of Toronto; LearnAI, its subsidiary course, teaches U of T undergraduates practical ML. I proudly spearheaded LearnAI as the club Director of Education for three years.<br>
-
-    In 2021, we partnered with <a href="https://ai-commons.org/" target="_blank">AI Commons</a> to expand our reach and empower people in emerging countries!
-    <br>''', unsafe_allow_html=True)
 
     st.markdown('''
     ### 2021
@@ -59,8 +56,6 @@ def main():
     <style>.img-container {text-align: center;}</style>
     <div class="img-container"><img src="https://kadenmc.github.io/projects/PreprocessingConversion.png" width="75%%" style="border-radius:50px;"/></div>
     ''', unsafe_allow_html=True)
-
-    st.warning("Demo - Coming Soon!")
 
     st.markdown('''
     <br>

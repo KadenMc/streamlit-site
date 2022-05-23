@@ -33,17 +33,9 @@ def main():
     st.markdown("<h3>About Me</h3>", unsafe_allow_html=True)
 
     st.info('''
-    - A passionate machine learning researcher &amp; engineer
-    - Broadly interested in medical/clinical ML applications
-    - Aiming to complete an MSc in Computer Science
-    ''')
-
-    st.markdown("<h3>Positions</h3>", unsafe_allow_html=True)
-
-    st.info('''
     - Applied machine learning intern at the Vector Institute
-    - Machine learning researcher at Sunnybrook's BrainLab
-    - 4th year Computer Science student at the University of Toronto
+    - Broadly interested in medical &amp; clinical ML applications
+    - HBSc in Computer Science from the University of Toronto
     ''')
 
     st.markdown("""

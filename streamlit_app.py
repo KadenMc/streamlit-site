@@ -16,7 +16,7 @@ st.set_page_config(
 menu_data = [
     {'label':"Home"},
     {'label':"Projects"},
-    {'label':"Publications"},
+    #{'label':"Publications"},
 ]
 
 theme = {'txc_inactive':'white', 'menu_background':'#A9A9A9','txc_active':'black', 'option_active':'#EFEFEF'}
