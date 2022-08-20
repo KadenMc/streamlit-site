@@ -10,7 +10,7 @@ def main():
     # Centered headshot image
     st.markdown("""
     <style>.img-container {text-align: center;}</style>
-    <div class="img-container"><img src="https://kadenmc.github.io/kaden-circle.png" width="50%%"/></div><br>
+    <div class="img-container"><img src="https://kadenmc.github.io/conference.png" width="60%%"/></div><br>
     """, unsafe_allow_html=True)
 
     
