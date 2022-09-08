@@ -33,14 +33,14 @@ def main():
     st.markdown("<h3>About Me</h3>", unsafe_allow_html=True)
 
     st.info('''
-    - Applied machine learning intern at the Vector Institute
+    - Machine learning researcher at Wang Lab
     - Broadly interested in medical &amp; clinical ML applications
-    - HBSc in Computer Science from the University of Toronto
+    - HBSc specializing in Computer Science from the University of Toronto
     ''')
 
     st.markdown("""
     <style>.img-container {text-align: center;}</style>
-    <div class="img-container"><img src="https://kadenmc.github.io/assets/Icon.png" width="85%%"/></div><br>
+    <div class="img-container"><img src="https://kadenmc.github.io/assets/uoft-uhn.png" width="85%%"/></div><br>
     """, unsafe_allow_html=True)
 
     st.markdown("<h3>Personal</h3>", unsafe_allow_html=True)
@@ -49,4 +49,11 @@ def main():
     Kaden enjoys walking his dogs, paddleboarding, and watching videos on various tidbits of science &#128300;<br>
     
     He values time with friends and staying fit. He finds writing in 3rd person particularly awkward!
+    """, unsafe_allow_html=True)
+
+    # https://www.linkedin.com/badges/profile/create?vanityname=kadenmckeen&preferredlocale=en_US&trk=public_profile-settings_badge
+    st.markdown("""
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="kadenmckeen" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/kadenmckeen?trk=profile-badge">Kaden McKeen</a></div>
     """, unsafe_allow_html=True)
