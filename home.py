@@ -50,10 +50,3 @@ def main():
     
     He values time with friends and staying fit. He finds writing in 3rd person particularly awkward!
     """, unsafe_allow_html=True)
-
-    # https://www.linkedin.com/badges/profile/create?vanityname=kadenmckeen&preferredlocale=en_US&trk=public_profile-settings_badge
-    st.markdown("""
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="kadenmckeen" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/kadenmckeen?trk=profile-badge">Kaden McKeen</a></div>
-    """, unsafe_allow_html=True)
