@@ -15,7 +15,7 @@ def main():
     ''')
 
     st.markdown('''
-    <h4><a href="https://vectorinstitute.ai" target="_blank">Vector Institute</a> – CyclOps: An Evaluation Framework for Clinical ML</h4>
+    <h4><a href="https://vectorinstitute.ai" target="_blank">Vector Institute</a> – <a href="https://github.com/VectorInstitute/cyclops" target="_blank">CyclOps: An Evaluation Framework for ML in Health</a></h4>
     ''', unsafe_allow_html=True)
     
     checkout_cv()
